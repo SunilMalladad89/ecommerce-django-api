@@ -1,0 +1,26 @@
+{% extends "products/base.html" %}
+
+{% block title%}Add  Product {% endblock %}
+
+{% block content%}
+{% comment %} befor form {% endcomment %}
+{% comment %} <h1>Add New Product</h1>
+<form method="POST">
+    {% csrf_token %}
+    <p>Name: <input type="text" name="name"></p>
+    <p>Description: <textarea name="description"></textarea></p>
+    <p>Price: <input type="number" name="price" step="0.01"></p>
+    <p>Stock: <input type="number" name="stock"></p>
+    <button type="submit">Add Product</button>
+</form> {% endcomment %}
+
+<h1> Add New Products </h1>
+<form method ="POST" novalidate enctype="multipart/form-data" novalidate >
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Product</button>
+
+</form>
+<a href="{% url 'products:product-list' %}">← Back</a>
+{% endblock %}
