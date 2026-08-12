@@ -2,7 +2,17 @@
 
 
 
-A fully functional E-Commerce Backend API built with Django and DRF.
+A fully functional E-Commerce Backend API built with Django and Django REST Framework.
+
+
+
+\## Live Demo
+
+\- \*\*API Root:\*\* https://ecommerce-django-api.onrender.com/api/
+
+\- \*\*Products:\*\* https://ecommerce-django-api.onrender.com/api/products/
+
+\- \*\*Categories:\*\* https://ecommerce-django-api.onrender.com/api/categories/
 
 
 
@@ -14,9 +24,37 @@ A fully functional E-Commerce Backend API built with Django and DRF.
 
 \- Django REST Framework
 
+\- JWT Authentication (SimpleJWT)
+
+\- PostgreSQL (Production)
+
+\- SQLite (Development)
+
+\- WhiteNoise (Static Files)
+
+\- Gunicorn (Production Server)
+
+\- Render (Deployment)
+
+
+
+\## Features
+
+\- Product CRUD operations
+
+\- Category management
+
+\- User Registration and Login
+
 \- JWT Authentication
 
-\- SQLite
+\- Image Upload
+
+\- Admin Panel
+
+\- REST API with DRF
+
+\- ViewSets and Routers
 
 
 
@@ -26,41 +64,53 @@ A fully functional E-Commerce Backend API built with Django and DRF.
 
 \### Authentication
 
-\- POST /api/register/ → Register
+| Method | URL | Description |
 
-\- POST /api/token/ → Get token
+|--------|-----|-------------|
 
-\- POST /api/token/refresh/ → Refresh token
+| POST | /api/register/ | Register new user |
+
+| POST | /api/token/ | Get JWT token |
+
+| POST | /api/token/refresh/ | Refresh token |
 
 
 
 \### Products
 
-\- GET    /api/products/ → List all
+| Method | URL | Description |
 
-\- POST   /api/products/ → Create
+|--------|-----|-------------|
 
-\- GET    /api/products/{id}/ → Get one
+| GET | /api/products/ | List all products |
 
-\- PUT    /api/products/{id}/ → Update
+| POST | /api/products/ | Create product |
 
-\- PATCH  /api/products/{id}/ → Partial update
+| GET | /api/products/{id}/ | Get one product |
 
-\- DELETE /api/products/{id}/ → Delete
+| PUT | /api/products/{id}/ | Update product |
+
+| PATCH | /api/products/{id}/ | Partial update |
+
+| DELETE | /api/products/{id}/ | Delete product |
 
 
 
 \### Categories
 
-\- GET    /api/categories/ → List all
+| Method | URL | Description |
 
-\- POST   /api/categories/ → Create
+|--------|-----|-------------|
 
-\- GET    /api/categories/{id}/ → Get one
+| GET | /api/categories/ | List all categories |
 
-\- PUT    /api/categories/{id}/ → Update
+| POST | /api/categories/ | Create category |
 
-\- DELETE /api/categories/{id}/ → Delete
+| GET | /api/categories/{id}/ | Get one category |
+
+| PUT | /api/categories/{id}/ | Update category |
+
+| DELETE | /api/categories/{id}/ | Delete category |
 
 
 
@@ -68,47 +118,5 @@ A fully functional E-Commerce Backend API built with Django and DRF.
 
 
 
-1\. Clone repository
-
-git clone https://github.com/SunilMalladad89/ecommerce-django-api.git
-
-
-
-2\. Create virtual environment
-
-python -m venv venv
-
-venv\\Scripts\\activate
-
-
-
-3\. Install dependencies
-
-pip install -r requirements.txt
-
-
-
-4\. Create .env file
-
-SECRET\_KEY=your\_secret\_key
-
-DEBUG=True
-
-
-
-5\. Run migrations
-
-python manage.py migrate
-
-
-
-6\. Create superuser
-
-python manage.py createsuperuser
-
-
-
-7\. Run server
-
-python manage.py runserver
+\### 1. Clone repository
 
